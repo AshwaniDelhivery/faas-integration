@@ -178,14 +178,16 @@ class Search extends Component {
   };
 
   getApiCall = searchInput => {
-    let url = `https://api-facilities.delhivery.com/v1/partners/facilities/${searchInput}/meta/ExpectedPath/`;
+    let prod_url = `https://api-facilities.delhivery.com/v1/partners/facilities/${searchInput}/meta/ExpectedPath/`;
+    let url = `https://api-facilities.pntrzz.com/v1/partners/facilities/${searchInput}/meta/ExpectedPath/`;
 
     let req = {
       method: 'GET',
       headers: {
         'Content-Type': "application/json",
         'Accept': "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ldHBsYW5fZXNfaW50ZWdyYXRpb24iLCJ0b2tlbl9uYW1lIjoibmV0cGxhbl9lc19pbnRlZ3JhdGlvbiIsImNlbnRlciI6WyJJTkQxMjIwMDNBQUIiXSwidXNlcl90eXBlIjoiTkYiLCJhcHBfaWQiOjY3LCJhdWQiOiIuZGVsaGl2ZXJ5LmNvbSIsImZpcnN0X25hbWUiOiJuZXRwbGFuX2VzX2ludGVncmF0aW9uIiwic3ViIjoidW1zOjp1c2VyOjpjOWU5NTcwNC1mYTAyLTExZTgtYTg5Yi0wNjg5YTJkOWYyZDQiLCJleHAiOjE3MDE4NTUwNTIsImFwcF9uYW1lIjoibmV0cGxhbl9lc19pbnRlZ3JhdGlvbiIsImFwaV92ZXJzaW9uIjoidjIifQ.Asv5ufx47u5BE6PSMyJEhZoc9jKMtXWvEekWIoh9-sE"
+
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRldi1zdXBlci1hZG1pbiIsInRva2VuX25hbWUiOiJkZXYtc3VwZXItYWRtaW4iLCJjZW50ZXIiOlsiSU5ENDIxNTAyQUFBIl0sInVzZXJfdHlwZSI6Ik5GIiwiYXBwX2lkIjoiNDciLCJhdWQiOiJHdkRLem9kNmFPSU0zTGN5YTlCamZCYjhidkZrWVRYeSIsImZpcnN0X25hbWUiOiJkZXYtc3VwZXItYWRtaW4iLCJzdWIiOiJ1bXM6OnVzZXI6OmU1ZGEyZmQ2LTQyZWUtMTFlOC04MTNmLTBlNGJlMmFkYTUwYyIsImV4cCI6MTg0Mjg1NDIzNCwiYXBwX25hbWUiOiJGQUFTIiwiYXBpX3ZlcnNpb24iOiJ2MiJ9.vzGeahQ-O1xBGSl4g-oPgN27Y7NXqVrYbJzN4B4Yft0"
       }
     }
 
