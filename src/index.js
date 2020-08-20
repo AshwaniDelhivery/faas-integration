@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Search from './Search';
+import App from './example';
+import { BrowserRouter } from 'react-router-dom';
 
+const app = (
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+)
 
-ReactDOM.render(
-  <React.StrictMode>
- 	<Search /> 
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
+ReactDOM.render(app, document.getElementById('root'));
